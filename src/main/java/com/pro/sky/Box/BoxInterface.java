@@ -7,3 +7,4 @@ public interface BoxInterface {
 
     public String toString();
 }
+

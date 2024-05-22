@@ -12,6 +12,7 @@ public class ServiceBox implements BoxInterface {
         this.box = box;
     }
 
+
     @Override
     public void newProduct(List<Integer> idsProduct) {
         box.addProduct(idsProduct);

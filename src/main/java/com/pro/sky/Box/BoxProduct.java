@@ -20,6 +20,7 @@ public class BoxProduct {
         return productId;
     }
 
+
     @Override
     public String toString() {
         return productId + "";
