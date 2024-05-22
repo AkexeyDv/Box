@@ -15,11 +15,12 @@ public class BoxController {
     }
 
     @GetMapping(path = "/store/order/add")
-    public void productAddToBox(@RequestParam("id") List<Integer> idProduct){
+    public void productAddToBox(@RequestParam("id") List<Integer> idProduct) {
         boxInterface.newProduct(idProduct);
     }
+
     @GetMapping(path = "/store/order/get")
-    public String getProductFromBox(){
-        return  boxInterface.toString();
+    public String getProductFromBox() {
+        return boxInterface.toString();
     }
 }

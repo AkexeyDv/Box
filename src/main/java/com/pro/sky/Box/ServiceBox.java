@@ -20,6 +20,6 @@ public class ServiceBox implements BoxInterface {
 
     @Override
     public String toString() {
-        return box+" ";
+        return box + " ";
     }
 }

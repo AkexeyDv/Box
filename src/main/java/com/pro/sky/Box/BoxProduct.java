@@ -12,7 +12,7 @@ public class BoxProduct {
     private List<Integer> productId;
 
     public BoxProduct(List<Integer> productId) {
-        this.productId = new ArrayList<>();
+        this.productId = productId;
     }
 
     public List<Integer> addProduct(List<Integer> listIdProduct) {
@@ -22,6 +22,6 @@ public class BoxProduct {
 
     @Override
     public String toString() {
-        return productId+"";
+        return productId + "";
     }
 }
