@@ -4,6 +4,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.swing.plaf.LabelUI;
+import java.util.List;
+
 @RestController
 public class BoxController {
     private final BoxInterface boxInterface;
@@ -13,11 +16,13 @@ public class BoxController {
     }
 
     @GetMapping(path = "/store/order/add")
-    public void productAddToBox(@RequestParam("id") Integer idProdict){
-        boxInterface.newProduct(idProdict);
+    public void addProductsToBox(@RequestParam("id") List<Integer> idProduct) {
+        boxInterface.newProducts(idProduct);
     }
+
     @GetMapping(path = "/store/order/get")
-    public String getProductFromBox(){
-        return  boxInterface.toString();
+    public List getProductsFromBox() {
+        return boxInterface.getProducts();
     }
 }
+

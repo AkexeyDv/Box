@@ -2,24 +2,27 @@ package com.pro.sky.Box;
 
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class ServiceBox implements BoxInterface {
-    private final List<Integer> productBox=new ArrayList<>();
+    private final BoxProduct box;
 
+    public ServiceBox(BoxProduct box) {
+        this.box = box;
+    }
 
 
     @Override
-    public void newProduct(int idProduct) {
-        productBox.add(idProduct);
+    public void newProducts(List<Integer> idProducts) {
+        box.addProducts(idProducts);
+
     }
 
     @Override
-    public String toString() {
-        return "ServiceBox{" +
-                "productBox=" + productBox +
-                '}';
+    public List getProducts() {
+        return box.getProducts();
     }
+
+
 }
