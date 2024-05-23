@@ -3,26 +3,23 @@ package com.pro.sky.Box;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Component
 @SessionScope
 public class BoxProduct {
-    private List<Integer> productId;
+    private List<Integer> idProducts;
 
     public BoxProduct(List<Integer> productId) {
-        this.productId = productId;
+        this.idProducts = productId;
     }
 
-    public List<Integer> addProduct(List<Integer> listIdProduct) {
-        productId.addAll(listIdProduct);
-        return productId;
+    public void addProducts(List<Integer> listIdProducts) {
+        idProducts.addAll(listIdProducts);
     }
 
-
-    @Override
-    public String toString() {
-        return productId + "";
+    public List getProducts() {
+        return Collections.unmodifiableList(idProducts);
     }
 }

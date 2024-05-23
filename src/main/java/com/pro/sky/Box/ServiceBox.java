@@ -14,13 +14,15 @@ public class ServiceBox implements BoxInterface {
 
 
     @Override
-    public void newProduct(List<Integer> idsProduct) {
-        box.addProduct(idsProduct);
+    public void newProducts(List<Integer> idProducts) {
+        box.addProducts(idProducts);
 
     }
 
     @Override
-    public String toString() {
-        return box + " ";
+    public List getProducts() {
+        return box.getProducts();
     }
+
+
 }
